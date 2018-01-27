@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <p id="cont"></p>
+    <script>
+
+        var oCont = document.querySelector('#cont');
+        var oTxt = document.querySelector('#txt');
+        var user = {}, nameValue = 'itcast';
+        oCont.innerHTML = nameValue;
+        oTxt.value = nameValue;
+
+        Object.defineProperty(user, 'name', {
+            get: function () {
+                return nameValue;
+            },
+            set: function (newValue) {
+                nameValue = newValue;
+                oCont.innerHTML = newValue;
+                oTxt.value = nameValue;
+            }
+        });
+        oTxt.oninput = function () {
+            user.name = this.value;
+        };
+    </script>
+</body>
+
+</html>
