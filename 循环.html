@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // var arr = [2,3,4]
+    // for(var i=0;i<arr.length;i++){
+    //     console.log(arr[i])
+    //     break;
+    // }
+    // arr.forEach(function(item,i){
+    //     console.log(item)
+    //     // break;
+    //     return;
+    // })
+    // arr.a = 100;
+    // for(var i in arr){
+    //     console.log(arr[i])
+    // }
+    // for(var item of arr){
+    //     console.log(item)
+    //     break;
+    // }
+
+    // null,undefined,array,string,boolean,object
+    
+
+    // var arr = [2,3,4,5,2]
+    // var set = new Set(arr)
+    // // console.log(set)
+    // var arr1 = [...set]
+    // console.log(arr1)
+    // function fn(a=1){
+    //     return a * a;
+    // }
+    // console.log(fn())
+
+    // function add(...a){//剩余参数数组
+    //     // console.log(rest)
+    //     return a.reduce(function(a,b){return a+b})
+    // }
+
+    // console.log(add(2,3,4,5,6,7,8,9,10,11,12))
+
+
+    let obj = {
+        fn:function(){
+            // setTimeout(function(){
+            //     console.log(this)
+            // })
+            setTimeout(() => {
+                console.log(this)
+            }, 10);
+        }
+    }
+
+    obj.fn()
+
+
+
+
+
+
+    function Person(name,age){
+        this.name = name;
+        this.age = age
+    }
+    Person.prototype.fn = function(){
+
+    }
+    
+
+
+
+    class Person{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        fn(){
+            console.log(this)
+        }
+    }
+
+    class A extends Person{
+        constructor(name,age,c){
+            super(name,age)//不写会报错
+            this.c = c;
+        }
+    }
+    </script>
+</body>
+</html>

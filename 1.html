@@ -1,38 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
 <body>
-    <input type="text" id="txt">
-    <p id="cont"></p>
     <script>
+    // let a = 1;
+    //     let b = 2;
+        // [a, b] = [b, a]
+        // [a,b] = [1,2]//结构匹配
+        // console.log(a)
+        // console.log(b);
 
-        var oCont = document.querySelector('#cont');
-        var oTxt = document.querySelector('#txt');
-        var user = {}, nameValue = 'itcast';
-        oCont.innerHTML = nameValue;
-        oTxt.value = nameValue;
+        // var obj = {
+        //     name:'itcast',
+        //     age:20
+        // }
 
-        Object.defineProperty(user, 'name', {
-            get: function () {
-                return nameValue;
-            },
-            set: function (newValue) {
-                nameValue = newValue;
-                oCont.innerHTML = newValue;
-                oTxt.value = nameValue;
-            }
-        });
-        oTxt.oninput = function () {
-            user.name = this.value;
-        };
+        // // var name = obj.name;
+        // // var age = obj.age;
+        // // console.log(name)
+        // var {name,age} = obj;
+        
+
+
+        // var {name,age} = {
+        //     name:'itcast',
+        //     age:20
+        // }
+
+
+        // var { age, name } = {
+        //         name: 'itcast',
+        //         age: 20
+        //     }
+            
+        // console.log(age)
+    
+        // var myName = obj.name;
+        //别名
+        // var {name:myName} = {
+        //     name:'itcast',age:20
+        // }
+        
+        // console.log(myName)
+        // console.log(name)
+        // {
+        //     a:1,
+        //     b:2 
+        // }
+
+
+        // import {a,b} from './main.js'
+
+        // var {stringify} = JSON
+        // console.log(stringify({name:'itcast'}))
+        
+        // import {DOM} from 'react'
+
+
+        // var str = "a.html"//扩展名是html
+        // console.log(str.endsWith('html'))
+
+        // var str1 = '/public/js/a.js';
+        // console.log(str1.startsWith('/public'))
+        // var str = 'abc';
+        // console.log(str.includes('b'));
+
+
+        // var m = (new Date).getMonth() + 1 + '';
+        // m = m<10?('0' + m):m 
+        // console.log(m)
+        // console.log(m.padStart(2,'0'))
+            
+        // $str = <<<A 
+        // wefwfwef
+        // wefwefwef
+        // <<<A 
+
+        var a = '我是标题'
+        var str = 
+        `
+            <div>
+                <h1>${a}</h1>
+                ${2+3}
+            </div>
+        `
+
+        console.log(str)
+
+
+        var str1 = `wfwewef`
     </script>
 </body>
-
 </html>
